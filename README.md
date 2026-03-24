@@ -35,8 +35,8 @@ Não é apenas uma landing page.
 
 ## Demonstração
 
-Em breve (deploy na Vercel)
 
+(https://calhambeque.vercel.app/)
 ---
 
 ## Tecnologias utilizadas
