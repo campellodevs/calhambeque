@@ -87,6 +87,15 @@ export default function Gallery() {
             <div
               key={item.id}
               onClick={() => setSelected(index)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelected(index);
+                }
+              }}
+              aria-label={`Abrir foto de ${item.title}`}
               className={`bg-white border-4 border-black cursor-pointer group transition-all hover:shadow-lg hover:border-[#CC0000] overflow-hidden relative ${
                 index === 0 ? "col-span-2 md:col-span-1" : ""
               }`}
@@ -138,6 +147,9 @@ export default function Gallery() {
         <div
           className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
           onClick={() => setSelected(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Ampliação de foto da galeria"
         >
           <div
             className="relative bg-white border-4 border-black w-full max-w-sm p-8 flex flex-col items-center justify-center gap-4"
@@ -147,7 +159,7 @@ export default function Gallery() {
             {galleryItems[selected].isImage ? (
               <Image src={`${galleryItems[selected].emoji}?t=${Date.now()}`} alt={galleryItems[selected].title} width={150} height={150} unoptimized />
             ) : (
-              <span className="text-9xl">{galleryItems[selected].emoji}</span>
+              <span className="text-9xl" aria-hidden="true">{galleryItems[selected].emoji}</span>
             )}
             <h3
               className="text-2xl text-black uppercase text-center font-black"
@@ -163,25 +175,28 @@ export default function Gallery() {
             <button
               onClick={() => setSelected(selected === 0 ? galleryItems.length - 1 : selected - 1)}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#CC0000] border-2 border-black flex items-center justify-center text-white font-black hover:bg-red-700"
+              aria-label="Foto anterior"
               style={{ boxShadow: "2px 2px 0px black" }}
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={20} aria-hidden="true" />
             </button>
             <button
               onClick={() => setSelected(selected === galleryItems.length - 1 ? 0 : selected + 1)}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#CC0000] border-2 border-black flex items-center justify-center text-white font-black hover:bg-red-700"
+              aria-label="Próxima foto"
               style={{ boxShadow: "2px 2px 0px black" }}
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={20} aria-hidden="true" />
             </button>
 
             {/* Close */}
             <button
               onClick={() => setSelected(null)}
               className="absolute top-2 right-2 w-8 h-8 bg-[#CC0000] border-2 border-black flex items-center justify-center text-white font-black"
+              aria-label="Fechar galeria"
               style={{ boxShadow: "2px 2px 0px black" }}
             >
-              <X size={16} />
+              <X size={16} aria-hidden="true" />
             </button>
           </div>
         </div>

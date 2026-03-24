@@ -1,0 +1,33 @@
+{
+  "name": "O Calhambeque Hot Dog",
+  "short_name": "Calhambeque",
+  "description": "O hot dog mais charmoso de São Paulo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#CC0000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/ocalhambeque(1).jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/ocalhambeque(1).jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["food", "restaurants"],
+  "screenshots": [
+    {
+      "src": "/images/ocalhambeque(1).jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ]
+}
