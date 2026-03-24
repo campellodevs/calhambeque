@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
-export default function Navbar() {
+export default memo(function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
@@ -57,6 +57,8 @@ export default function Navbar() {
           ))}
           <Link
             href="/menu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#CC0000] text-white text-xs font-black py-2 px-6 hover:bg-red-700 transition-all duration-300 uppercase tracking-widest ml-2 border-2 border-black"
             style={{ boxShadow: "3px 3px 0px black" }}
           >
@@ -88,6 +90,8 @@ export default function Navbar() {
           ))}
           <Link
             href="/menu"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="bg-[#CC0000] text-white text-xs font-black py-3 px-6 text-center uppercase tracking-widest mt-2 border-2 border-black"
             style={{ boxShadow: "3px 3px 0px black" }}
@@ -98,4 +102,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-}
+});

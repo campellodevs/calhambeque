@@ -1,10 +1,10 @@
 "use client";
 
 import { Flame, Shield, Sparkles, Users, Volume2, VolumeX } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, memo, useEffect } from "react";
 import Image from "next/image";
 
-export default function Experience() {
+export default memo(function Experience() {
   const [storyProgress, setStoryProgress] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -38,6 +38,22 @@ export default function Experience() {
       setIsMuted(!isMuted);
     }
   };
+
+  // Update progress bar while video plays
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (!videoElement) return;
+
+    const updateProgress = () => {
+      if (videoElement.duration) {
+        const progress = (videoElement.currentTime / videoElement.duration) * 100;
+        setStoryProgress(progress);
+      }
+    };
+
+    videoElement.addEventListener("timeupdate", updateProgress);
+    return () => videoElement.removeEventListener("timeupdate", updateProgress);
+  }, []);
 
   return (
     <section id="experiencia" className="bg-white py-12 border-t-4 border-black">
@@ -103,7 +119,6 @@ export default function Experience() {
                 playsInline
                 className="w-full h-full object-cover"
                 style={{ transform: "scale(1.1)" }}
-                onPlay={() => setStoryProgress(0)}
               >
                 <source src="/images/calhambequinho.mp4" type="video/mp4" />
               </video>
@@ -165,4 +180,4 @@ export default function Experience() {
       </div>
     </section>
   );
-}
+});

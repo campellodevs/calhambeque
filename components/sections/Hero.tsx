@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { memo } from "react";
 
-export default function Hero() {
+export default memo(function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Video */}
@@ -13,6 +14,8 @@ export default function Hero() {
         muted
         loop
         playsInline
+        preload="none"
+        poster="/images/ocalhambeque(1).jpg"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "brightness(0.2) contrast(1.2)" }}
       >
@@ -91,6 +94,8 @@ export default function Hero() {
 
           <Link
             href="/menu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-black text-white font-black py-4 px-10 uppercase tracking-widest text-sm border-2 border-black hover:bg-white hover:text-black transition-colors"
             style={{ boxShadow: "5px 5px 0px #CC0000" }}
           >
@@ -129,4 +134,4 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+});

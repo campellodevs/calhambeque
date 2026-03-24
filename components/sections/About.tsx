@@ -2,8 +2,9 @@
 
 import { Award, Clock, MapPin, Truck } from "lucide-react";
 import Image from "next/image";
+import { memo } from "react";
 
-export default function About() {
+export default memo(function About() {
   const highlights = [
     {
       icon: <Clock size={28} className="text-[#CC0000]" />,
@@ -64,6 +65,7 @@ export default function About() {
                 alt="Calhambeque" 
                 width={40} 
                 height={40}
+                loading="lazy"
               />
               <span className="text-2xl text-[#CC0000] font-black" style={{ fontFamily: "'Bebas Neue', cursive" }}>
                 AUTÊNTICO, CHARMOSO!
@@ -129,4 +131,4 @@ export default function About() {
       </div>
     </section>
   );
-}
+});

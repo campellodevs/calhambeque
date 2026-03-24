@@ -1,8 +1,9 @@
 "use client";
 
 import { Building2, Car, Crown, Briefcase } from "lucide-react";
+import { memo } from "react";
 
-export default function Events() {
+export default memo(function Events() {
   const eventTypes = [
     {
       icon: <Building2 size={28} className="text-white" />,
@@ -103,4 +104,4 @@ export default function Events() {
       </div>
     </section>
   );
-}
+});

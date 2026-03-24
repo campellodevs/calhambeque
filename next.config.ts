@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
-// @ts-ignore
+// @ts-expect-error: next-pwa lacks TypeScript declarations
 import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
+  turbopack: {},
   webpack: (config) => {
     return config;
   },

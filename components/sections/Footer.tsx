@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import { ChevronUp, Heart, Mail, MessageCircle, X } from "lucide-react";
 
-export default function Footer() {
+export default memo(function Footer() {
   const [showModal, setShowModal] = useState(false);
 
   const contactInfo = [
@@ -171,4 +171,4 @@ export default function Footer() {
       )}
     </>
   );
-}
+});

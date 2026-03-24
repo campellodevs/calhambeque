@@ -1,8 +1,9 @@
 "use client";
 
 import { MessageCircle, Mail, MapPin, Clock, Phone, Zap, UtensilsCrossed, Star, Heart } from "lucide-react";
+import { memo } from "react";
 
-export default function Contact() {
+export default memo(function Contact() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511934349515";
   const whatsappMessage = encodeURIComponent(
     "Olá! Vim pelo site e gostaria de contratar o Calhambeque para um evento. Podemos conversar?"
@@ -136,4 +137,4 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+});

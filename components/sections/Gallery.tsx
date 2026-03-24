@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import Image from "next/image";
 
@@ -49,7 +49,7 @@ const galleryItems = [
   },
 ];
 
-export default function Gallery() {
+export default memo(function Gallery() {
   const [selected, setSelected] = useState<number | null>(null);
 
   return (
@@ -112,6 +112,8 @@ export default function Gallery() {
                       alt={item.title}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/80 to-transparent p-4">
@@ -203,4 +205,4 @@ export default function Gallery() {
       )}
     </section>
   );
-}
+});

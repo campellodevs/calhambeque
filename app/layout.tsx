@@ -8,10 +8,16 @@ import { ErrorBoundary } from "@/context/ErrorBoundary";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://calhambeque.com.br"),
   title: "O Calhambeque Hot Dog | São Paulo",
   description:
     "O hot dog mais charmoso de São Paulo. Mais de 9 anos levando sabor vintage e estilo nos maiores eventos.",
   keywords: "hot dog, food truck, são paulo, eventos, calhambeque, vintage",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+    shortcut: "/favicon.png",
+  },
   openGraph: {
     title: "O Calhambeque Hot Dog | São Paulo",
     description: "O hot dog mais charmoso de São Paulo",
@@ -35,7 +41,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="/images/ocalhambeque(1).jpg" type="image/jpeg" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#CC0000" />
         <meta name="mobile-web-app-capable" content="yes" />
