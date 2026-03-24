@@ -1,36 +1,190 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# O Calhambeque Hot Dog
 
-## Getting Started
+> O hot dog mais charmoso de São Paulo — agora também na web.
+<img width="1871" height="810" alt="image" src="https://github.com/user-attachments/assets/6fee3e6a-0590-4536-ab64-13ca7d6e70b8" />
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Sobre o projeto
+
+O **O Calhambeque** é um food truck temático inspirado em carros clássicos, com mais de 9 anos de estrada, marcando presença nos maiores eventos de São Paulo.
+
+Este projeto nasceu com dois objetivos:
+
+* Criar uma presença digital moderna e profissional
+* Resolver um problema real: cardápio multilíngue para eventos com QR Code
+
+---
+
+## O que torna esse projeto especial?
+
+Não é apenas uma landing page.
+
+É uma solução pensada para eventos reais.
+
+### Diferenciais:
+
+* Cardápio em múltiplos idiomas (PT, EN, ES, ZH)
+* QR Code dinâmico por idioma
+* Experiência rápida e responsiva
+* Design inspirado em carros vintage (Hot Wheels + retrô)
+* Estrutura escalável e pronta para evoluir
+
+---
+
+## Demonstração
+
+Em breve (deploy na Vercel)
+
+---
+
+## Tecnologias utilizadas
+
+* React.js
+* Next.js (App Router)
+* TypeScript
+* TailwindCSS
+* Axios
+* Context API
+* QR Code Generator
+
+---
+
+## Estrutura do projeto
+
+```id="q9x8pl"
+/app
+  page.tsx
+  /menu
+
+/components
+  /sections
+  /menu
+
+/context
+/data
+/public
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidade principal: Cardápio inteligente
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A página `/menu` permite:
 
-## Learn More
+* Seleção de idioma via interface
+* URL única por idioma:
 
-To learn more about Next.js, take a look at the following resources:
+  ```
+  /menu?lang=pt
+  /menu?lang=en
+  /menu?lang=es
+  /menu?lang=zh
+  ```
+* Geração automática de QR Code
+* Uso direto em eventos físicos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Isso permite que clientes escaneiem o QR Code e acessem o cardápio no idioma correto.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Design e Experiência
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O design foi construído com base em:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Preto profundo (#0A0A0A)
+* Branco suave (#F5F5F5)
+* Vermelho vibrante (#CC0000)
+* Destaques em dourado (#FFD700)
+
+Tipografia:
+
+* Bebas Neue (identidade retrô)
+* Inter (legibilidade moderna)
+
+---
+
+## Responsividade
+
+* Mobile-first
+* Totalmente adaptado para eventos
+* Navegação simples e direta
+
+---
+
+## Como rodar o projeto
+
+```bash id="1d9z5w"
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento
+npm run dev
+
+# Build de produção
+npm run build
+
+# Start produção
+npm start
+```
+
+---
+
+## Boas práticas aplicadas
+
+* Componentização
+* Separação de responsabilidades
+* Uso de Context API
+* Tipagem com TypeScript
+* Estrutura escalável
+* Performance otimizada
+
+---
+
+## Roadmap (próximos passos)
+
+* Deploy na Vercel
+* Integração com WhatsApp real
+* Upload de imagens dinâmicas
+* Painel admin para editar cardápio
+* Analytics de acessos via QR Code
+
+---
+
+## Insight do projeto
+
+Esse projeto pode evoluir para:
+
+* Um SaaS de cardápio digital para eventos
+* Solução para food trucks e feiras
+* Plataforma de experiência gastronômica
+
+---
+
+## Autor
+
+Lucca Campello Rodrigues dos Santos
+
+* Engenharia de Software
+* Desenvolvedor Fullstack
+* Focado em criar soluções reais com tecnologia
+
+Contato:
+
+* Email: [luccacampello21@gmail.com](mailto:luccacampello21@gmail.com)
+* GitHub: https://github.com/campellodevs
+
+---
+
+## Conclusão
+
+Mais do que um site, esse projeto representa:
+
+* Resolver um problema real
+* Criar uma experiência
+* Construir algo com identidade
+
+---
+
+"Não é só um hot dog. É uma experiência sobre rodas."
