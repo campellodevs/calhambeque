@@ -89,7 +89,6 @@ export default memo(function About() {
                 Uma marca com história, presença garantida nos maiores eventos de São Paulo.
               </p>
 
-              {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {["Artesanal", "Vintage", "Eventos", "SP", "Hot Dog"].map(
                   (tag) => (

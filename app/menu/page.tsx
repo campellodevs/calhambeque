@@ -118,7 +118,7 @@ function MenuContent() {
           </div>
         </div>
 
-        {/* HEADER */}
+
         <div className="text-center mb-16">
           <h1
             className="text-6xl md:text-7xl text-white uppercase font-black mb-6 tracking-tight"
@@ -230,7 +230,6 @@ function MenuContent() {
                 />
               </div>
 
-              {/* DOWNLOAD BUTTON */}
               <button
                 onClick={downloadQRCode}
                 aria-label="Baixar código QR do cardápio em PNG"

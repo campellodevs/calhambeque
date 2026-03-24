@@ -144,7 +144,6 @@ export default memo(function Gallery() {
         </p>
       </div>
 
-      {/* Lightbox */}
       {selected !== null && (
         <div
           className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
@@ -191,7 +190,6 @@ export default memo(function Gallery() {
               <ChevronRight size={20} aria-hidden="true" />
             </button>
 
-            {/* Close */}
             <button
               onClick={() => setSelected(null)}
               className="absolute top-2 right-2 w-8 h-8 bg-[#CC0000] border-2 border-black flex items-center justify-center text-white font-black"

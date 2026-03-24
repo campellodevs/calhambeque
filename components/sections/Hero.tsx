@@ -8,7 +8,6 @@ import { memo } from "react";
 export default memo(function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Video */}
       <video
         autoPlay
         muted
@@ -22,19 +21,14 @@ export default memo(function Hero() {
         <source src="/images/videofundocalhambeque.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay para suavidar exposição */}
       <div className="absolute inset-0 bg-black/25"></div>
 
-      {/* Gradient overlay para transição suave para próxima section */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-black/40 to-[#CC0000]"></div>
 
-      {/* Decorative stripe */}
       <div className="absolute top-0 left-0 right-0 h-3 bg-[#CC0000] z-20"></div>
       <div className="absolute top-3 left-0 right-0 h-1 bg-black z-20"></div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-12 pb-32 flex flex-col items-center text-center gap-8 justify-center">
-        {/* Logo showcase */}
         <div className="mb-4 relative">
           <div className="absolute inset-0 rounded-full neon-border"></div>
           <Image 
@@ -55,7 +49,6 @@ export default memo(function Hero() {
           <span className="text-[#CC0000] text-2xl">★</span>
         </div>
 
-        {/* Headline */}
         <h1
           className="text-5xl md:text-7xl lg:text-8xl text-white uppercase leading-tight tracking-tight drop-shadow-lg"
           style={{ fontFamily: "'Bebas Neue', cursive", letterSpacing: "3px", textShadow: "3px 3px 6px rgba(0,0,0,0.8)" }}
@@ -65,7 +58,6 @@ export default memo(function Hero() {
           de São Paulo
         </h1>
 
-        {/* Decorative line */}
         <div className="flex items-center gap-4 w-full justify-center">
           <div className="flex-1 h-1 bg-white max-w-xs"></div>
           <Image 
@@ -103,7 +95,6 @@ export default memo(function Hero() {
           </Link>
         </div>
 
-        {/* Stats */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12 pt-8 border-t-4 border-white w-full">
           {[
             { value: "9+", label: "Anos de Estrada" },
@@ -125,7 +116,6 @@ export default memo(function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-20">
         <span className="text-white text-xs uppercase tracking-widest font-bold drop-shadow-lg" style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}>
           Role para ver mais

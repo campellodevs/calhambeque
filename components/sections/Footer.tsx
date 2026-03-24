@@ -43,7 +43,7 @@ export default memo(function Footer() {
             </h1>
           </div>
 
-          {/* BOTTOM */}
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* COPYRIGHT */}
             <div className="flex-1 bg-white border-4 border-black p-8" style={{ boxShadow: "6px 6px 0px #CC0000" }}>
@@ -89,7 +89,6 @@ export default memo(function Footer() {
         </div>
       </footer>
 
-      {/* MODAL */}
       {showModal && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
@@ -100,7 +99,6 @@ export default memo(function Footer() {
             style={{ boxShadow: "12px 12px 0px black" }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={() => setShowModal(false)}
               className="absolute top-4 right-4 w-8 h-8 bg-[#CC0000] border-2 border-black flex items-center justify-center text-white font-black"
@@ -109,7 +107,6 @@ export default memo(function Footer() {
               <X size={16} />
             </button>
 
-            {/* Title */}
             <h2
               className="text-4xl md:text-5xl text-black uppercase text-center font-black mt-2"
               style={{ fontFamily: "'Bebas Neue', cursive", letterSpacing: "2px" }}

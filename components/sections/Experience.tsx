@@ -58,7 +58,6 @@ export default memo(function Experience() {
   return (
     <section id="experiencia" className="bg-white py-12 border-t-4 border-black">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center gap-4 mb-4 justify-center">
             <div className="w-12 h-1 bg-black"></div>
@@ -79,9 +78,7 @@ export default memo(function Experience() {
           </p>
         </div>
 
-        {/* Features Bars + Stories Layout */}
         <div className="grid lg:grid-cols-2 gap-12 mb-4 items-start">
-          {/* Features Bars - Left Side */}
           <div className="flex flex-col gap-4">
             {features.map((feature, index) => (
               <div
@@ -106,7 +103,6 @@ export default memo(function Experience() {
 
           {/* Stories - Right Side */}
           <div className="stories-container flex flex-col items-center gap-4">
-            {/* Stories Video Container */}
             <div
               className="stories-video relative w-full max-w-xs overflow-hidden rounded-2xl border-4 border-[#CC0000] bg-black"
               style={{ aspectRatio: "9/16", boxShadow: "0 0 15px rgba(204, 0, 0, 0.5)" }}
@@ -123,7 +119,6 @@ export default memo(function Experience() {
                 <source src="/images/calhambequinho.mp4" type="video/mp4" />
               </video>
 
-              {/* Story Progress Bar */}
               <div className="absolute top-2 left-12 right-4 h-1 bg-white/30 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-[#CC0000] transition-all duration-100"
@@ -133,7 +128,6 @@ export default memo(function Experience() {
                 ></div>
               </div>
 
-              {/* Profile Logo - Top Left */}
               <div className="absolute top-3 left-3 w-10 h-10 bg-white border-2 border-[#CC0000] rounded-full overflow-hidden flex items-center justify-center" style={{ boxShadow: "2px 2px 0px black" }}>
                 <Image
                   src="/images/ocalhambeque(1).jpg"
@@ -144,7 +138,6 @@ export default memo(function Experience() {
                 />
               </div>
 
-              {/* Texto Seal - Top Center */}
               <div
                 className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-[#CC0000] text-white px-1 py-1 rounded-full font-black text-xs uppercase whitespace-nowrap"
                 style={{ boxShadow: "2px 2px 0px black" }}
@@ -152,7 +145,6 @@ export default memo(function Experience() {
                 Recado do calhambequinho
               </div>
 
-              {/* Mute Button - Top Right */}
               <button
                 onClick={toggleMute}
                 className="absolute top-3 right-3 w-10 h-10 bg-[#CC0000] border-2 border-white flex items-center justify-center text-white font-black hover:bg-white hover:text-[#CC0000] transition-all rounded-full"

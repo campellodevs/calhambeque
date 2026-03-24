@@ -19,10 +19,8 @@ export default memo(function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black shadow-lg">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Divider line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-[#CC0000]"></div>
 
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 relative z-10">
           <Image 
             src="/images/ocalhambeque(1).jpg" 
@@ -44,7 +42,6 @@ export default memo(function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-1">
           {links.map((link) => (
             <Link
@@ -66,7 +63,6 @@ export default memo(function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden text-black"
           onClick={() => setIsOpen(!isOpen)}
@@ -75,7 +71,6 @@ export default memo(function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-t-4 border-black px-6 py-4 flex flex-col gap-2">
           {links.map((link) => (

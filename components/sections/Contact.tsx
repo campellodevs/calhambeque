@@ -13,7 +13,6 @@ export default memo(function Contact() {
   return (
     <section id="contato" className="bg-white py-24 border-t-4 border-[#CC0000]">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center gap-4 mb-4 justify-center">
             <div className="w-12 h-1 bg-black"></div>
@@ -35,7 +34,6 @@ export default memo(function Contact() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Left — WhatsApp + Phone */}
           <div className="flex flex-col gap-6">
             {/* WhatsApp card */}
             <div className="bg-[#CC0000] border-4 border-black p-8 flex flex-col gap-6 text-white" style={{ boxShadow: "6px 6px 0px black" }}>
@@ -80,7 +78,6 @@ export default memo(function Contact() {
             </div>
           </div>
 
-          {/* Right — Info cards */}
           <div className="flex flex-col gap-6">
             {[
               { icon: <MapPin size={20} />, label: "Localização", value: "São Paulo, SP", sub: "Atendemos toda a Grande SP" },

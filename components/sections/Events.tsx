@@ -64,7 +64,6 @@ export default memo(function Events() {
                 {type.icon}
               </div>
 
-              {/* Text */}
               <div>
                 <h3
                   className="text-white text-xl uppercase mb-2 font-black whitespace-pre-line"
